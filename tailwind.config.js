@@ -1,6 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ['src/App.vue', 'src/components/HeaderNav.vue', 'src/views/PatientsView.vue'],
+    content: [
+        'src/App.vue',
+        'src/components/HeaderNav.vue',
+        'src/views/PatientsView.vue',
+        'src/components/PatientsList.vue',
+        'src/components/DiagnosisHistory.vue',
+        'src/components/DiagnosticList.vue',
+        'src/components/JessicaProfile.vue',
+        'src/components/LabResults.vue'
+    ],
     theme: {
         extend: {
             //CUSTOM FONT
