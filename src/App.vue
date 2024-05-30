@@ -9,6 +9,8 @@ export default {
 </script>
 
 <template>
-    <HeaderNav />
-    <RouterView />
+    <div>
+        <HeaderNav />
+        <!-- <RouterView /> -->
+    </div>
 </template>
