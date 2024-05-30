@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="font-manrope">
         <div>
-            <img src="/img/test-logo.png" alt="" />
+            <img src="/img/test-logo.png" alt="test logo" />
         </div>
 
         <!--Nav Links-->
@@ -21,8 +21,9 @@
                 <img src="/img/jose-simmons.png" alt="jose-simmons" />
             </div>
             <div class="">
-                <div>Dr Jose Simmons</div>
-                <div class="">General Practitioner</div>
+                <div class="font-manrope font-bold">Dr. Jose Simmons 123456789</div>
+                <div class="text-xl">Dr Jose Simmons 123456789</div>
+                <div class="text-xl">Dr Jose Simmons 123456789</div>
             </div>
             <div>
                 <button class=""><img src="/img/settings.png" alt="settings" /></button>
