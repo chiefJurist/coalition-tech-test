@@ -7,9 +7,27 @@
 @tailwind utilities;
 
 /*/GENERAL STYLES*/
+.header-con {
+    @apply flex justify-around items-center w-11/12 bg-white rounded-full my-4 p-3;
+}
+.header-positioner {
+    @apply bg-custom-one flex justify-center;
+}
 .nav-link {
     @apply flex justify-evenly items-center rounded-full p-2 w-28;
 }
 .nav-link-text {
     @apply font-bold font-manrope  text-xs;
+}
+.user-con {
+    @apply flex justify-evenly gap-2 items-center;
+}
+.doctor {
+    @apply border-r border-custom-one pr-2;
+}
+.doctor-name {
+    @apply font-manrope font-bold text-custom-two text-sm;
+}
+.doctor-position {
+    @apply font-manrope text-custom-three text-sm;
 }
