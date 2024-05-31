@@ -1,11 +1,12 @@
 <script>
-import { PatientsList } from '../components/PatientsList.vue'
-import { Diagnosis } from '../components/DiagnosisHistory.vue'
-import { DiagnosticList } from '../components/DiagnosticList.vue'
-import { Profile } from '../components/JessicaProfile.vue'
-import { Results } from '../components/LabResults.vue'
+import PatientsList from '../components/PatientsList.vue'
+import Diagnosis from '../components/DiagnosisHistory.vue'
+import DiagnosticList from '../components/DiagnosticList.vue'
+import Profile from '../components/JessicaProfile.vue'
+import Results from '../components/LabResults.vue'
 
 export default {
+    name: 'PatientsView',
     components: { PatientsList, Diagnosis, DiagnosticList, Profile, Results }
 }
 </script>

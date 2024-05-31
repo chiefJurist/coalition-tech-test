@@ -1,4 +1,7 @@
 <script>
+// eslint-disable-next-line no-undef, no-unused-vars
+import { RouterLink } from 'vue-router'
+
 //
 </script>
 <template>
@@ -10,33 +13,34 @@
 
             <!--Nav Links-->
             <div class="flex justify-between items-center gap-2">
-                <div class="nav-link">
-                    <div><img src="/public/img/home.png" alt="overview" /></div>
+                <RouterLink to="/overview" class="nav-link" exact-active-class=" bg-custom-four">
+                    <div><img src="/img/home.png" alt="overview" /></div>
                     <div class="nav-link-text">Overview</div>
-                </div>
+                </RouterLink>
 
-                <router-Link
-                    :to="{ name: 'Patients' }"
-                    exact-active-class=" bg-custom-four nav-link"
-                >
-                    <div><img src="/public/img/group.png" alt="patients" /></div>
+                <RouterLink to="/" exact-active-class=" bg-custom-four" class="nav-link">
+                    <div><img src="/img/group.png" alt="patients" /></div>
                     <div class="nav-link-text">Patients</div>
-                </router-Link>
+                </RouterLink>
 
-                <div class="nav-link">
-                    <div><img src="/public/img/calender.png" alt="schedule" /></div>
+                <RouterLink to="/schedule" exact-active-class=" bg-custom-four" class="nav-link">
+                    <div><img src="/img/calender.png" alt="schedule" /></div>
                     <div class="nav-link-text">Schedule</div>
-                </div>
+                </RouterLink>
 
-                <div class="nav-link">
-                    <div><img src="/public/img/chat-bubble.png" alt="message" /></div>
+                <RouterLink to="/message" exact-active-class=" bg-custom-four" class="nav-link">
+                    <div><img src="/img/chat-bubble.png" alt="message" /></div>
                     <div class="nav-link-text">Message</div>
-                </div>
+                </RouterLink>
 
-                <div class="nav-link">
-                    <div><img src="/public/img/credit-card.png" alt="transactions" /></div>
+                <RouterLink
+                    to="/transactions"
+                    exact-active-class=" bg-custom-four"
+                    class="nav-link"
+                >
+                    <div><img src="/img/credit-card.png" alt="transactions" /></div>
                     <div class="nav-link-text">Transactions</div>
-                </div>
+                </RouterLink>
             </div>
 
             <!--User-->
