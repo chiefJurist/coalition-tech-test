@@ -10,7 +10,7 @@ export default {
 
 <template>
     <div>
-        <HeaderNav />222
+        <HeaderNav />
         <RouterView />
     </div>
 </template>

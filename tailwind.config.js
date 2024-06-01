@@ -22,7 +22,8 @@ export default {
                 'custom-one': '#F6F7F8',
                 'custom-two': '##072635',
                 'custom-three': '#707070',
-                'custom-four': '#01F0D0'
+                'custom-four': '#01F0D0',
+                'custom-five': '#F4F0FE'
             }
         }
     },
