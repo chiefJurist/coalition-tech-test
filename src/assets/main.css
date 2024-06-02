@@ -31,3 +31,21 @@
 .doctor-position {
     @apply font-manrope text-custom-three text-sm;
 }
+.sys-legend {
+    @apply bg-custom-six w-4 h-4 rounded-full;
+}
+.dias-legend {
+    @apply bg-custom-seven w-4 h-4 rounded-full;
+}
+.legend-con {
+    @apply flex gap-5 items-center;
+}
+.value-text {
+    @apply my-4 font-bold text-lg;
+}
+.legend-text {
+    @apply text-sm font-bold;
+}
+.legend-remark-con {
+    @apply flex gap-5 items-center mb-4;
+}

@@ -72,6 +72,11 @@ export default {
                             stepSize: 20 // Set the interval between ticks to 20
                         }
                     }
+                },
+                plugins: {
+                    legend: {
+                        display: false // Hide the legend entirely
+                    }
                 }
             }
         }
@@ -80,7 +85,70 @@ export default {
 </script>
 
 <template>
-    <div class="bg-custom-five">
-        <Line :data="data" :options="options" />
+    <div class="text-custom-two font-manrope p-8 rounded-2xl">
+        <div class="font-bold text-lg mb-6">Diagnosis History</div>
+        <div class="grid grid-cols-3 gap-10 bg-white">
+            <!--Blood Pressure-->
+            <div class="bg-custom-five flex justify-between p-8 rounded-xl col-span-3">
+                <div class="basis-9/12">
+                    <div class="flex justify-between items-center">
+                        <div class="font-bold">Blood Pressure</div>
+                        <div class="flex justify-between items-center gap-3 mr-6 text-sm">
+                            <span>Last 6 Months</span>
+                            <span><img src="/img/expand-more.png" alt="" /></span>
+                        </div>
+                    </div>
+                    <Line :data="data" :options="options" />
+                </div>
+                <div class="basis-3/12">
+                    <div class="border-b border-custom-one">
+                        <div class="legend-con">
+                            <div class="sys-legend"></div>
+                            <div class="legend-text">Systolic</div>
+                        </div>
+                        <div class="value-text">160</div>
+                        <div class="legend-remark-con">
+                            <img src="/img/arrow-up.png" alt="arrow-up" />
+                            <span class="text-sm">Higher than Average</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="legend-con">
+                            <div class="dias-legend"></div>
+                            <div class="legend-text">Diastolic</div>
+                        </div>
+                        <div class="value-text">78</div>
+                        <div class="legend-remark-con">
+                            <img src="/img/arrow-down.png" alt="arrow-down" />
+                            <span class="text-sm">Lower than Average</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Respiratory Rate-->
+            <div class="bg-custom-eight rounded-xl p-6">
+                <div><img src="/img/respiratory-rate.png" alt="respiratory-rate" /></div>
+                <div class="font-bold text-sm mt-4">Respiratory Rate</div>
+                <div class="font-bold text-lg mt-2">20 bpm</div>
+                <div class="text-sm mt-2">Normal</div>
+            </div>
+            <!--Temperature-->
+            <div class="bg-custom-nine rounded-xl p-6">
+                <div><img src="/img/temperature.png" alt="temperature" /></div>
+                <div class="font-bold text-sm mt-4">Temperature</div>
+                <div class="font-bold text-lg mt-2">98.6 °F</div>
+                <div class="text-sm mt-2">Normal</div>
+            </div>
+            <!--Heart Rate-->
+            <div class="bg-custom-ten rounded-xl p-6">
+                <div><img src="/img/heart-BPM.png" alt="heart-rate" /></div>
+                <div class="font-bold text-sm mt-4">Heart Rate</div>
+                <div class="font-bold text-lg mt-2">78 bpm</div>
+                <div class="text-sm mt-2 flex items-center gap-4">
+                    <img src="/img/arrow-down.png" alt="arrow-down" />
+                    <span>Lower than Average</span>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
