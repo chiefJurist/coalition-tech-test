@@ -85,8 +85,11 @@ export default {
 </script>
 
 <template>
-    <div class="text-custom-two font-manrope p-10 bg-white rounded-2xl">
+    <!--General Container-->
+    <div class="text-custom-two font-manrope p-10 bg-white rounded-2xl my-5">
+        <!--Header-->
         <div class="font-bold text-lg mb-6">Diagnosis History</div>
+        <!--Details Container-->
         <div class="grid grid-cols-3 gap-10">
             <!--Blood Pressure-->
             <div class="bg-custom-five flex justify-between p-8 rounded-xl col-span-3">

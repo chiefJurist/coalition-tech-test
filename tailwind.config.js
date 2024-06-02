@@ -28,7 +28,8 @@ export default {
                 'custom-seven': '#8C6FE6',
                 'custom-eight': '#E0F3FA',
                 'custom-nine': '#FFE6E9',
-                'custom-ten': '#FFE6F1'
+                'custom-ten': '#FFE6F1',
+                'custom-eleven': '#D8FCF7'
             }
         }
     },

@@ -33,6 +33,24 @@
 }
 
 /*Patients List*/
+.p-list-gen-con {
+    @apply bg-white p-5 rounded-2xl font-manrope text-custom-two my-5;
+}
+.p-list-header {
+    @apply flex justify-between items-center;
+}
+.p-list-header-text {
+    @apply font-bold text-lg;
+}
+.p-list-con {
+    @apply flex justify-between items-center p-3 cursor-pointer;
+}
+.p-name {
+    @apply font-bold;
+}
+.p-details {
+    @apply text-custom-three;
+}
 
 /*Diagnosis History*/
 .sys-legend {
