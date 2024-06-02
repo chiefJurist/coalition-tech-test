@@ -31,6 +31,10 @@
 .doctor-position {
     @apply font-manrope text-custom-three text-sm;
 }
+
+/*Patients List*/
+
+/*Diagnosis History*/
 .sys-legend {
     @apply bg-custom-six w-4 h-4 rounded-full;
 }
