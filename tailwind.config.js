@@ -19,8 +19,8 @@ export default {
 
             //CUSTOM COLOR
             colors: {
-                'custom-one': '#CBC8D4',
-                'custom-two': '##072635',
+                'custom-one': '#F6F7F8',
+                'custom-two': '#072635',
                 'custom-three': '#707070',
                 'custom-four': '#01F0D0',
                 'custom-five': '#F4F0FE',

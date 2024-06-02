@@ -85,9 +85,9 @@ export default {
 </script>
 
 <template>
-    <div class="text-custom-two font-manrope p-8 rounded-2xl">
+    <div class="text-custom-two font-manrope p-10 bg-white rounded-2xl">
         <div class="font-bold text-lg mb-6">Diagnosis History</div>
-        <div class="grid grid-cols-3 gap-10 bg-white">
+        <div class="grid grid-cols-3 gap-10">
             <!--Blood Pressure-->
             <div class="bg-custom-five flex justify-between p-8 rounded-xl col-span-3">
                 <div class="basis-9/12">

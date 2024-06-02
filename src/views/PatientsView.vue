@@ -11,7 +11,7 @@ export default {
 }
 </script>
 <template>
-    <div>
+    <div class="bg-custom-one py-10">
         <!--Patients List-->
         <div>
             <PatientsList></PatientsList>
