@@ -126,25 +126,25 @@ export default {
                 </div>
             </div>
             <!--Respiratory Rate-->
-            <div class="bg-custom-eight rounded-xl p-6">
+            <div class="bg-custom-eight diagnosis-con">
                 <div><img src="/img/respiratory-rate.png" alt="respiratory-rate" /></div>
-                <div class="font-bold text-sm mt-4">Respiratory Rate</div>
-                <div class="font-bold text-lg mt-2">20 bpm</div>
-                <div class="text-sm mt-2">Normal</div>
+                <div class="diagnosis-type">Respiratory Rate</div>
+                <div class="diagnosis-type">20 bpm</div>
+                <div class="diagnosis-remark">Normal</div>
             </div>
             <!--Temperature-->
-            <div class="bg-custom-nine rounded-xl p-6">
+            <div class="bg-custom-nine diagnosis-con">
                 <div><img src="/img/temperature.png" alt="temperature" /></div>
-                <div class="font-bold text-sm mt-4">Temperature</div>
-                <div class="font-bold text-lg mt-2">98.6 °F</div>
-                <div class="text-sm mt-2">Normal</div>
+                <div class="diagnosis-type">Temperature</div>
+                <div class="diagnosis-reading">98.6 °F</div>
+                <div class="diagnosis-remark">Normal</div>
             </div>
             <!--Heart Rate-->
-            <div class="bg-custom-ten rounded-xl p-6">
+            <div class="bg-custom-ten diagnosis-con">
                 <div><img src="/img/heart-BPM.png" alt="heart-rate" /></div>
-                <div class="font-bold text-sm mt-4">Heart Rate</div>
-                <div class="font-bold text-lg mt-2">78 bpm</div>
-                <div class="text-sm mt-2 flex items-center gap-4">
+                <div class="diagnosis-type">Heart Rate</div>
+                <div class="diagnosis-type">78 bpm</div>
+                <div class="diagnosis-remark flex items-center gap-4">
                     <img src="/img/arrow-down.png" alt="arrow-down" />
                     <span>Lower than Average</span>
                 </div>

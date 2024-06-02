@@ -49,3 +49,15 @@
 .legend-remark-con {
     @apply flex gap-5 items-center mb-4;
 }
+.diagnosis-con {
+    @apply rounded-xl p-6;
+}
+.diagnosis-type {
+    @apply font-bold text-sm mt-4;
+}
+.diagnosis-reading {
+    @apply font-bold text-lg mt-2;
+}
+.diagnosis-remark {
+    @apply text-sm mt-2;
+}
