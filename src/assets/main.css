@@ -115,3 +115,17 @@
 .d-con {
     @apply flex justify-between items-center py-2 px-6 border-b border-custom-one;
 }
+
+/*JESSICA PROFILE*/
+.profile-gen-con {
+    @apply bg-white p-8 text-custom-two font-manrope;
+}
+.profile-name {
+    @apply font-bold text-xl py-3;
+}
+.profile-info-con {
+    @apply flex items-center gap-3 py-3;
+}
+.profile-info-marker {
+    @apply w-8 h-8 rounded-full bg-custom-one flex items-center justify-center;
+}
