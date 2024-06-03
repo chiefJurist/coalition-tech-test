@@ -118,7 +118,7 @@
 
 /*JESSICA PROFILE*/
 .profile-gen-con {
-    @apply bg-white p-8 text-custom-two font-manrope;
+    @apply bg-white p-8 rounded-2xl text-custom-two font-manrope;
 }
 .profile-name {
     @apply font-bold text-xl py-3;
