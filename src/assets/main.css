@@ -129,3 +129,14 @@
 .profile-info-marker {
     @apply w-8 h-8 rounded-full bg-custom-one flex items-center justify-center;
 }
+
+/*Lab Results*/
+.labres-gen-con {
+    @apply bg-white rounded-2xl p-8 font-manrope text-custom-two;
+}
+.labres-header {
+    @apply font-bold text-lg py-4;
+}
+.labres-con {
+    @apply flex justify-between items-center p-3;
+}
