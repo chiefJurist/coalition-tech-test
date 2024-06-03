@@ -86,7 +86,7 @@ export default {
 
 <template>
     <!--General Container-->
-    <div class="text-custom-two font-manrope p-10 bg-white rounded-2xl my-5">
+    <div class="text-custom-two font-manrope p-10 bg-white rounded-2xl">
         <!--Header-->
         <div class="font-bold text-lg mb-6">Diagnosis History</div>
         <!--Details Container-->

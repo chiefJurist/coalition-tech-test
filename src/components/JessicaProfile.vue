@@ -1,5 +1,5 @@
 <template>
-    <div class="my-5 profile-gen-con">
+    <div class="profile-gen-con">
         <!--Profile Image-->
         <div>
             <img src="/img/jessica-taylor.png" alt="jessica" />

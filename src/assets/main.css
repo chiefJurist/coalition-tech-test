@@ -40,7 +40,7 @@
 
 /*Patients List*/
 .p-list-gen-con {
-    @apply bg-white p-5 rounded-2xl font-manrope text-custom-two my-5;
+    @apply bg-white p-5 rounded-2xl font-manrope text-custom-two;
 }
 .p-list-header {
     @apply flex justify-between items-center py-8;

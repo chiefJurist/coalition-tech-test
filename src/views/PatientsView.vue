@@ -11,7 +11,7 @@ export default {
 }
 </script>
 <template>
-    <div class="bg-custom-one py-10 grid grid-cols-4 gap-5 p-5">
+    <div class="bg-custom-one grid grid-cols-4 gap-5 p-5">
         <!--Patients List-->
         <div>
             <PatientsList></PatientsList>
