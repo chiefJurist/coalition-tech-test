@@ -14,7 +14,7 @@
     @apply bg-custom-one flex justify-center;
 }
 .nav-link {
-    @apply flex justify-evenly items-center rounded-full p-2 w-28;
+    @apply flex justify-evenly items-center rounded-full p-2 w-28 transition ease-in duration-500 hover:bg-cyan-300;
 }
 .nav-link-text {
     @apply font-bold font-manrope  text-xs;
@@ -72,7 +72,7 @@
     @apply flex gap-5 items-center;
 }
 .value-text {
-    @apply my-4 font-bold text-lg;
+    @apply my-2 font-bold text-lg;
 }
 .legend-text {
     @apply text-sm font-bold;
@@ -124,7 +124,7 @@
     @apply font-bold text-xl py-3;
 }
 .profile-info-con {
-    @apply flex items-center gap-3 py-3;
+    @apply flex items-center gap-3 py-6;
 }
 .profile-info-marker {
     @apply w-8 h-8 rounded-full bg-custom-one flex items-center justify-center;
@@ -132,7 +132,7 @@
 
 /*Lab Results*/
 .labres-gen-con {
-    @apply bg-white rounded-2xl p-8 font-manrope text-custom-two;
+    @apply bg-white rounded-2xl p-5 font-manrope text-custom-two;
 }
 .labres-header {
     @apply font-bold text-lg py-4;

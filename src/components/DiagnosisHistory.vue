@@ -86,13 +86,13 @@ export default {
 
 <template>
     <!--General Container-->
-    <div class="text-custom-two font-manrope p-10 bg-white rounded-2xl">
+    <div class="text-custom-two font-manrope p-5 bg-white rounded-2xl">
         <!--Header-->
         <div class="font-bold text-lg mb-6">Diagnosis History</div>
         <!--Details Container-->
         <div class="grid grid-cols-3 gap-10">
             <!--Blood Pressure-->
-            <div class="bg-custom-five flex justify-between p-8 rounded-xl col-span-3">
+            <div class="bg-custom-five flex justify-between py-5 px-3 rounded-xl col-span-3">
                 <div class="basis-9/12">
                     <div class="flex justify-between items-center">
                         <div class="font-bold">Blood Pressure</div>
@@ -112,7 +112,7 @@ export default {
                         <div class="value-text">160</div>
                         <div class="legend-remark-con">
                             <img src="/img/arrow-up.png" alt="arrow-up" />
-                            <span class="text-sm">Higher than Average</span>
+                            <span class="text-xs">Higher than Average</span>
                         </div>
                     </div>
                     <div class="mt-4">
@@ -123,7 +123,7 @@ export default {
                         <div class="value-text">78</div>
                         <div class="legend-remark-con">
                             <img src="/img/arrow-down.png" alt="arrow-down" />
-                            <span class="text-sm">Lower than Average</span>
+                            <span class="text-xs">Lower than Average</span>
                         </div>
                     </div>
                 </div>

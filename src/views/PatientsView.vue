@@ -13,18 +13,18 @@ export default {
 <template>
     <div class="bg-custom-one grid grid-cols-4 gap-5 p-5">
         <!--Patients List-->
-        <div>
+        <div class="h-custom">
             <PatientsList></PatientsList>
         </div>
 
         <!--Diagnosis and Diagnostic-->
-        <div class="col-span-2">
+        <div class="col-span-2 h-custom">
             <div><Diagnosis></Diagnosis></div>
             <div><DiagnosticList></DiagnosticList></div>
         </div>
 
         <!--More Info on Patient-->
-        <div>
+        <div class="h-custom">
             <div><Profile></Profile></div>
             <div><Results></Results></div>
         </div>

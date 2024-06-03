@@ -31,6 +31,11 @@ export default {
                 'custom-ten': '#FFE6F1',
                 'custom-eleven': '#D8FCF7',
                 'custom-twelve': '#E3E4E6'
+            },
+
+            //CUSTOM HEIGHT
+            height: {
+                custom: '65.875rem'
             }
         }
     },
