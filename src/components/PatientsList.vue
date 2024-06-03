@@ -90,12 +90,10 @@ export default {
         </div>
 
         <!--Patients Container-->
-        <div class="relative">
+        <div class="relative -pr-2">
             <!-- Vertical Progress Bar -->
-            <div
-                class="progress-bar-con absolute inset-y-0 -right-2 w-1 bg-custom-twelve rounded-full"
-            >
-                <div class="progress bg-custom-two rounded-full" style="height: 15%"></div>
+            <div class="progress-bar-con">
+                <div class="progress-bar" style="height: 15%"></div>
             </div>
 
             <!--Patient List-->

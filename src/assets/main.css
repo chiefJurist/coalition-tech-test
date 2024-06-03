@@ -31,6 +31,12 @@
 .doctor-position {
     @apply font-manrope text-custom-three text-sm;
 }
+.progress-bar {
+    @apply bg-custom-two rounded-full;
+}
+.progress-bar-con {
+    @apply absolute inset-y-0 right-0 w-1 bg-custom-twelve rounded-full;
+}
 
 /*Patients List*/
 .p-list-gen-con {
@@ -85,4 +91,27 @@
 }
 .diagnosis-remark {
     @apply text-sm mt-2;
+}
+
+/*Diagnostic List*/
+.d-list-gen-con {
+    @apply bg-white rounded-2xl p-8 font-manrope text-custom-two;
+}
+.d-list-header {
+    @apply font-bold text-lg p-5;
+}
+.d-list-header-con {
+    @apply flex justify-between items-center bg-custom-one py-2 px-5 rounded-full;
+}
+.d-list-prob {
+    @apply basis-4/12;
+}
+.d-list-des {
+    @apply basis-7/12;
+}
+.d-list-stat {
+    @apply basis-1/12;
+}
+.d-con {
+    @apply flex justify-between items-center py-2 px-6 border-b border-custom-one;
 }
