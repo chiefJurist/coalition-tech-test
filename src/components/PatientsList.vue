@@ -82,7 +82,11 @@ export default {
 </script>
 
 <template>
-    <div class="p-list-gen-con">
+    <div class="p-list-gen-con relative">
+        <!-- Vertical Progress Bar -->
+        <div class="progress-bar-con absolute inset-y-0 right-1 w-1 bg-custom-twelve rounded-full">
+            <div class="progress bg-custom-two rounded-full" style="height: 20%"></div>
+        </div>
         <!--Heading-->
         <div class="p-list-header">
             <span class="p-list-header-text">Patients</span>
