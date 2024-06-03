@@ -3,7 +3,7 @@
         "name": "Jessica Taylor",
         "gender": "Female",
         "age": 28,
-        "profile_picture": "https://fedskillstest.ct.digital/4.png",
+        "profile_picture": "../public/img/jessica-taylor.png",
         "date_of_birth": "1996-08-23",
         "phone_number": "(415) 555-1234",
         "emergency_contact": "(415) 555-5678",
@@ -34,8 +34,137 @@
                     "value": 98.6,
                     "levels": "Normal"
                 }
+            },
+            {
+                "month": "February",
+                "year": 2024,
+                "blood_pressure": {
+                    "systolic": {
+                        "value": 150,
+                        "levels": "Higher than Average"
+                    },
+                    "diastolic": {
+                        "value": 70,
+                        "levels": "Lower than Average"
+                    }
+                },
+                "heart_rate": {
+                    "value": 78,
+                    "levels": "Lower than Average"
+                },
+                "respiratory_rate": {
+                    "value": 20,
+                    "levels": "Normal"
+                },
+                "temperature": {
+                    "value": 98.6,
+                    "levels": "Normal"
+                }
+            },
+            {
+                "month": "January",
+                "year": 2024,
+                "blood_pressure": {
+                    "systolic": {
+                        "value": 110,
+                        "levels": "Normal"
+                    },
+                    "diastolic": {
+                        "value": 90,
+                        "levels": "Normal"
+                    }
+                },
+                "heart_rate": {
+                    "value": 78,
+                    "levels": "Lower than Average"
+                },
+                "respiratory_rate": {
+                    "value": 20,
+                    "levels": "Normal"
+                },
+                "temperature": {
+                    "value": 98.6,
+                    "levels": "Normal"
+                }
+            },
+            {
+                "month": "December",
+                "year": 2023,
+                "blood_pressure": {
+                    "systolic": {
+                        "value": 161,
+                        "levels": "Higher than Average"
+                    },
+                    "diastolic": {
+                        "value": 109,
+                        "levels": "Higher than Average"
+                    }
+                },
+                "heart_rate": {
+                    "value": 78,
+                    "levels": "Lower than Average"
+                },
+                "respiratory_rate": {
+                    "value": 20,
+                    "levels": "Normal"
+                },
+                "temperature": {
+                    "value": 98.6,
+                    "levels": "Normal"
+                }
+            },
+            {
+                "month": "November",
+                "year": 2023,
+                "blood_pressure": {
+                    "systolic": {
+                        "value": 115,
+                        "levels": "Normal"
+                    },
+                    "diastolic": {
+                        "value": 63,
+                        "levels": "Lower than Average"
+                    }
+                },
+                "heart_rate": {
+                    "value": 78,
+                    "levels": "Lower than Average"
+                },
+                "respiratory_rate": {
+                    "value": 20,
+                    "levels": "Normal"
+                },
+                "temperature": {
+                    "value": 98.6,
+                    "levels": "Normal"
+                }
+            },
+            {
+                "month": "October",
+                "year": 2023,
+                "blood_pressure": {
+                    "systolic": {
+                        "value": 120,
+                        "levels": "Normal"
+                    },
+                    "diastolic": {
+                        "value": 110,
+                        "levels": "Higher than Average"
+                    }
+                },
+                "heart_rate": {
+                    "value": 78,
+                    "levels": "Lower than Average"
+                },
+                "respiratory_rate": {
+                    "value": 20,
+                    "levels": "Normal"
+                },
+                "temperature": {
+                    "value": 98.6,
+                    "levels": "Normal"
+                }
             }
-            // Additional months of diagnostic history
         ],
         "diagnostic_list": [
             {
