@@ -1,11 +1,14 @@
 <template>
     <div class="my-5 profile-gen-con">
+        <!--Profile Image-->
         <div>
             <img src="/img/jessica-taylor.png" alt="jessica" />
         </div>
 
+        <!--Profile Name-->
         <div class="profile-name">Jessica Taylor</div>
 
+        <!--Profile Details-->
         <div class="profile-info-con">
             <div class="profile-info-marker">
                 <img src="/img/calender.png" alt="calendar" />
