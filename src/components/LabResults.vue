@@ -3,8 +3,7 @@ export default {
     data() {
         return {
             result: '',
-            labResult: '',
-            classChecker: ''
+            labResult: ''
         }
     },
 

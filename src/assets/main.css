@@ -95,7 +95,7 @@
 
 /*Diagnostic List*/
 .d-list-gen-con {
-    @apply bg-white rounded-2xl p-8 font-manrope text-custom-two;
+    @apply bg-white rounded-2xl py-10 px-5 font-manrope text-custom-two;
 }
 .d-list-header {
     @apply font-bold text-lg p-5;
@@ -104,13 +104,13 @@
     @apply flex justify-between items-center bg-custom-one py-2 px-5 rounded-full;
 }
 .d-list-prob {
-    @apply basis-4/12;
+    @apply basis-4/12 text-xs;
 }
 .d-list-des {
-    @apply basis-7/12;
+    @apply basis-6/12 text-xs;
 }
 .d-list-stat {
-    @apply basis-1/12;
+    @apply basis-2/12 text-xs;
 }
 .d-con {
     @apply flex justify-between items-center py-2 px-6 border-b border-custom-one;

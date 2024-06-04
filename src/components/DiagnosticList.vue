@@ -1,3 +1,27 @@
+<script>
+export default {
+    data() {
+        return {
+            result: '',
+            diagList: ''
+        }
+    },
+
+    mounted() {
+        //Fetching The Data
+        fetch('/data/db.json')
+            //fetching the respose
+            .then((response) => response.json())
+            //fetching the actual data and populating the result property
+            .then((data) => {
+                ;(this.result = data), (this.diagList = this.result[0].diagnostic_list)
+            })
+            //catching errors
+            .catch((error) => console.error(error))
+    }
+}
+</script>
+
 <template>
     <div class="my-5 d-list-gen-con">
         <!--Diagnostic List Heading-->
@@ -14,20 +38,10 @@
             <div class="progress-bar-con">
                 <div class="progress-bar" style="height: 55%"></div>
             </div>
-            <div class="d-con">
-                <span class="d-list-prob">Hypertension</span>
-                <span class="d-list-des">Chronic high blood pressure</span>
-                <span class="d-list-stat">Under Observation</span>
-            </div>
-            <div class="d-con">
-                <span class="d-list-prob">Type 2 Diabetes</span>
-                <span class="d-list-des">Insulin resistance and elevated blood sugar</span>
-                <span class="d-list-stat">Cured</span>
-            </div>
-            <div class="d-con">
-                <span class="d-list-prob">Asthma</span>
-                <span class="d-list-des">Recurrent episodes of brochial constriction</span>
-                <span class="d-list-stat">Inactive</span>
+            <div class="d-con" v-for="list in diagList" :key="list">
+                <span class="d-list-prob"> {{ list.name }}</span>
+                <span class="d-list-des">{{ list.description }}</span>
+                <span class="d-list-stat">{{ list.status }}</span>
             </div>
         </div>
     </div>
