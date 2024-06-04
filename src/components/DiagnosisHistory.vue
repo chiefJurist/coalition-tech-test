@@ -22,6 +22,22 @@ export default {
     },
     data() {
         return {
+            result: '',
+            diagHist: '',
+            respiratoryRate: '',
+            respiratoryRateLevel: '',
+            temperature: '',
+            temperatureLevel: '',
+            heartRate: '',
+            heartRateLevel: '',
+            systolic: '',
+            systolicLevel: '',
+            systolicArray: [],
+            diastolic: '',
+            diastolicLevel: '',
+            diastolicArray: [],
+
+            //for the chart
             data: {
                 labels: [
                     'Oct, 2023',
@@ -33,28 +49,28 @@ export default {
                 ],
                 datasets: [
                     {
-                        label: 'Diastolic', // Add a label for the dataset
-                        data: [110, 63, 109, 90, 70, 78],
-                        borderColor: '#7E6CAB', // Set the color of the line
-                        fill: true, // This property fills the area under the line
-                        cubicInterpolationMode: 'monotone', // Make the line curvy
-                        tension: 0.7, // Adjust tension for smoother curves (increased value)
-                        pointRadius: 6, // Set the size of the points
-                        pointHoverRadius: 8, // Set the size of the points on hover
-                        borderWidth: 2, // Set the thickness of the lines
-                        pointBackgroundColor: '#7E6CAB' // Set the fill color of the points
+                        label: 'Diastolic',
+                        data: [],
+                        borderColor: '#7E6CAB',
+                        fill: true,
+                        cubicInterpolationMode: 'monotone',
+                        tension: 0.7,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        borderWidth: 2,
+                        pointBackgroundColor: '#7E6CAB'
                     },
                     {
-                        label: 'Systolic', // Add a label for the dataset
-                        data: [120, 115, 161, 110, 150, 160],
-                        borderColor: '#E66FD2', // Set the color of the line
-                        fill: true, // This property fills the area under the line
-                        cubicInterpolationMode: 'monotone', // Make the line curvy
-                        tension: 0.7, // Adjust tension for smoother curves (increased value)
-                        pointRadius: 6, // Set the size of the points
-                        pointHoverRadius: 8, // Set the size of the points on hover
-                        borderWidth: 2, // Set the thickness of the lines
-                        pointBackgroundColor: '#E66FD2' // Set the fill color of the points
+                        label: 'Systolic',
+                        data: [],
+                        borderColor: '#E66FD2',
+                        fill: true,
+                        cubicInterpolationMode: 'monotone',
+                        tension: 0.7,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        borderWidth: 2,
+                        pointBackgroundColor: '#E66FD2'
                     }
                 ]
             },
@@ -66,10 +82,10 @@ export default {
                     },
                     y: {
                         beginAtZero: false,
-                        min: 60, // Set the minimum value of the Y-axis to 60
-                        max: 180, // Set the maximum value of the Y-axis to 180
+                        min: 60,
+                        max: 180,
                         ticks: {
-                            stepSize: 20 // Set the interval between ticks to 20
+                            stepSize: 20
                         }
                     }
                 },
@@ -80,6 +96,54 @@ export default {
                 }
             }
         }
+    },
+
+    mounted() {
+        //Fetching The Data
+        fetch('/data/db.json')
+            //fetching the response
+            .then((response) => response.json())
+            //fetching the actual data and populating the result property
+            .then((data) => {
+                this.result = data
+                this.diagHist = this.result[0].diagnosis_history
+                this.respiratoryRate = this.diagHist[0].respiratory_rate.value
+                this.respiratoryRateLevel = this.diagHist[0].respiratory_rate.levels
+                this.temperature = this.diagHist[0].temperature.value
+                this.temperatureLevel = this.diagHist[0].temperature.levels
+                this.heartRate = this.diagHist[0].heart_rate.value
+                this.heartRateLevel = this.diagHist[0].heart_rate.levels
+                this.systolic = this.diagHist[0].blood_pressure.systolic.value
+                this.systolicLevel = this.diagHist[0].blood_pressure.systolic.levels
+                this.diastolic = this.diagHist[0].blood_pressure.diastolic.value
+                this.diastolicLevel = this.diagHist[0].blood_pressure.diastolic.levels
+
+                //Populating the array for the chart
+                for (let index = this.diagHist.length - 1; index >= 0; index--) {
+                    this.diastolicArray.push(this.diagHist[index].blood_pressure.diastolic.value)
+                    this.systolicArray.push(this.diagHist[index].blood_pressure.systolic.value)
+                }
+
+                // Update the chart data
+                this.data = {
+                    ...this.data,
+                    datasets: [
+                        {
+                            ...this.data.datasets[0],
+                            data: this.diastolicArray
+                        },
+                        {
+                            ...this.data.datasets[1],
+                            data: this.systolicArray
+                        }
+                    ]
+                }
+
+                console.log(this.data.datasets[0].data)
+                console.log(this.data.datasets[1].data)
+            })
+            //catching errors
+            .catch((error) => console.error(error))
     }
 }
 </script>
@@ -109,10 +173,10 @@ export default {
                             <div class="sys-legend"></div>
                             <div class="legend-text">Systolic</div>
                         </div>
-                        <div class="value-text">160</div>
+                        <div class="value-text">{{ systolic }}</div>
                         <div class="legend-remark-con">
                             <img src="/img/arrow-up.png" alt="arrow-up" />
-                            <span class="text-xs">Higher than Average</span>
+                            <span class="text-xs">{{ systolicLevel }}</span>
                         </div>
                     </div>
                     <div class="mt-4">
@@ -120,10 +184,10 @@ export default {
                             <div class="dias-legend"></div>
                             <div class="legend-text">Diastolic</div>
                         </div>
-                        <div class="value-text">78</div>
+                        <div class="value-text">{{ diastolic }}</div>
                         <div class="legend-remark-con">
                             <img src="/img/arrow-down.png" alt="arrow-down" />
-                            <span class="text-xs">Lower than Average</span>
+                            <span class="text-xs">{{ diastolicLevel }}</span>
                         </div>
                     </div>
                 </div>
@@ -132,24 +196,24 @@ export default {
             <div class="bg-custom-eight diagnosis-con">
                 <div><img src="/img/respiratory-rate.png" alt="respiratory-rate" /></div>
                 <div class="diagnosis-type">Respiratory Rate</div>
-                <div class="diagnosis-type">20 bpm</div>
-                <div class="diagnosis-remark">Normal</div>
+                <div class="diagnosis-type">{{ respiratoryRate }} bpm</div>
+                <div class="diagnosis-remark">{{ respiratoryRateLevel }}</div>
             </div>
             <!--Temperature-->
             <div class="bg-custom-nine diagnosis-con">
                 <div><img src="/img/temperature.png" alt="temperature" /></div>
                 <div class="diagnosis-type">Temperature</div>
-                <div class="diagnosis-reading">98.6 °F</div>
-                <div class="diagnosis-remark">Normal</div>
+                <div class="diagnosis-reading">{{ temperature }} °F</div>
+                <div class="diagnosis-remark">{{ temperatureLevel }}</div>
             </div>
             <!--Heart Rate-->
             <div class="bg-custom-ten diagnosis-con">
                 <div><img src="/img/heart-BPM.png" alt="heart-rate" /></div>
                 <div class="diagnosis-type">Heart Rate</div>
-                <div class="diagnosis-type">78 bpm</div>
+                <div class="diagnosis-type">{{ heartRate }} bpm</div>
                 <div class="diagnosis-remark flex items-center gap-4">
                     <img src="/img/arrow-down.png" alt="arrow-down" />
-                    <span>Lower than Average</span>
+                    <span>{{ heartRateLevel }}</span>
                 </div>
             </div>
         </div>
