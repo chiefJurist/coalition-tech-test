@@ -138,9 +138,6 @@ export default {
                         }
                     ]
                 }
-
-                console.log(this.data.datasets[0].data)
-                console.log(this.data.datasets[1].data)
             })
             //catching errors
             .catch((error) => console.error(error))
