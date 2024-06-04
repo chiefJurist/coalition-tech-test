@@ -121,13 +121,16 @@
     @apply bg-white p-8 rounded-2xl text-custom-two font-manrope;
 }
 .profile-name {
-    @apply font-bold text-xl py-3;
+    @apply font-bold text-xl py-3 flex justify-center;
 }
 .profile-info-con {
-    @apply flex items-center gap-3 py-6;
+    @apply flex items-center gap-3 py-3;
 }
 .profile-info-marker {
     @apply w-8 h-8 rounded-full bg-custom-one flex items-center justify-center;
+}
+.patient-show-more {
+    @apply cursor-pointer my-10 font-bold flex justify-center bg-custom-four rounded-full p-2 transition ease-in duration-500 hover:bg-cyan-300;
 }
 
 /*Lab Results*/
