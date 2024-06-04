@@ -100,6 +100,7 @@ export default {
             <div
                 class="p-list-con"
                 v-for="patient in patients"
+                :key="patient"
                 :class="{ pBackground: patient.isActive }"
             >
                 <div><img :src="patient.img" alt="patient-image" /></div>

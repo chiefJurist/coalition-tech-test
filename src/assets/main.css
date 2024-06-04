@@ -143,3 +143,6 @@
 .labres-con {
     @apply flex justify-between items-center p-3;
 }
+.labresActive {
+    @apply bg-custom-one;
+}
