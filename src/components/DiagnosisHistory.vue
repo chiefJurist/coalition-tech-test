@@ -150,7 +150,7 @@ export default {
 
 <template>
     <!--General Container-->
-    <div class="text-custom-two font-manrope p-5 bg-white rounded-2xl">
+    <div class="text-custom-two font-manrope px-5 py-12 bg-white rounded-2xl">
         <!--Header-->
         <div class="font-bold text-lg mb-6">Diagnosis History</div>
         <!--Details Container-->
